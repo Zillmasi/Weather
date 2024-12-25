@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      rel="shortcut icon"
+      href="imgs/cloud-solid (1).svg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg m-4">
+      <div class="container">
+        <a class="navbar-brand d-flex" href="index.html">
+          <div class="img-logo w-25 me-3">
+            <img src="imgs/logo@2x.png" class="w-100" alt="cloud" />
+          </div>
+          <div class="content-logo">
+            <h1>Weather</h1>
+            <p>tagline goes here</p>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler text-white bg-body-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main"
+          aria-controls="main"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main">
+          <ul class="navbar-nav ms-auto mb-2">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="main-sec">
+      <div class="container">
+        <form class="d-flex justify-content-center align-items-center">
+          <input
+            type="search "
+            class="search-input flex-grow-1"
+            id="searchInput"
+            placeholder="Find your location..."
+          />
+          <div class="button">
+            <button type="button" class="btn-search" id="btnSearch">
+              Find
+            </button>
+          </div>
+        </form>
+        <div class="row g-0 py-3" id="DataRow">
+          <div class="col-md-12 col-lg-4">
+            <div class="inner" id="dayOne">
+              <div class="card-head d-flex justify-content-between py-2 px-3">
+                <span id="dayOneName"></span>
+                <div>
+                  <span id="dayOneDateNum"></span>
+                  <span id="dayOneDate"></span>
+                </div>
+              </div>
+              <div class="card-body px-4 pb-3">
+                <h2 id="dayOneCity"></h2>
+                <div class="degree d-flex align-items-center mb-4">
+                  <div class="num me-5">
+                    <span id="dayOneDeg"></span>
+                    <sup>o</sup>
+                    c
+                  </div>
+
+                  <div class="degree-img" id="DayOneDi">
+                    <img
+                      src="imgs/116.png"
+                      class="mt-5"
+                      width="48"
+                      alt="degree-img"
+                    />
+                  </div>
+                </div>
+                <span class="Partly-cloudy" id="DayOneDes"></span>
+
+                <div class="d-flex mt-4 iconss">
+                  <div class="">
+                    <i
+                      class="fa-solid fa-umbrella me-1"
+                      style="color: #b0b0b0"
+                    ></i>
+                    <span id="DayOneRain"></span>
+                    <span>%</span>
+                  </div>
+                  <div class="mx-4">
+                    <i class="fa-solid fa-wind me-1" style="color: #b0b0b0"></i>
+                    <span id="DayOneWind"> </span>
+                    <span>Km/h</span>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-regular fa-compass me-1"
+                      style="color: #b0b0b0"
+                    ></i>
+                    <span id="dayOneAir"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="inner" id="dayTwo">
+              <div
+                class="card-head-next-day-one d-flex justify-content-center py-2 px-3"
+              >
+                <span id="DayTwoName">Tuesday</span>
+              </div>
+
+              <div class="card-body-next-day-one text-center">
+                <div class="degree-img mb-3">
+                  <img
+                    id="DayTwoDi"
+                    src=""
+                    class="mt-5"
+                    width="48"
+                    alt="degree-img "
+                  />
+                </div>
+                <div class="num text-center">
+                  <span id="dayTwoDateNumBIg"></span>
+                  <sup>o</sup>
+                  c
+                </div>
+                <div class="numii text-white text-center">
+                  <span id="dayTwoDateNumSma">25</span>
+                  <sup>o</sup>
+                  c
+                </div>
+                <span id="DayTwoDes">Moderate rain</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="inner" id="dayThree">
+              <div
+                class="card-head-next-day-two d-flex justify-content-center py-2 px-3"
+              >
+                <span id="DayThreeName"></span>
+              </div>
+
+              <div class="card-body-next-day-two text-center">
+                <div class="degree-img mb-3">
+                  <img
+                    id="DayThreeDi"
+                    src=""
+                    class="mt-5"
+                    width="48"
+                    alt="degree-img"
+                  />
+                </div>
+                <div class="num text-center">
+                  <span id="dayThreeDateNumBIg"></span>
+                  <sup>o</sup>
+                  c
+                </div>
+                <div class="numii text-white text-center">
+                  <span id="dayThreeDateNumSma"></span>
+                  <sup>o</sup>
+                  c
+                </div>
+                <span id="DayThreeDes"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class=" col-md-8 col-lg-8">
+            <form class="d-flex justify-content-center align-items-center">
+              <input
+                type="search "
+                class="search-input flex-grow-1"
+                id="searchInput"
+                placeholder="Enter your email to subscribe..."
+              />
+              <div class="button">
+                <button type="button" class="btn-search" id="btnSearch">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-3 col-lg-3">
+            <div class="iconss d-flex justify-content-center align-items-center">
+              <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-google-plus-g"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-pinterest"></i>
+              </a>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center my-4">
+            <p>Copyright 2014 Ahmed Adel. Designed by Themezy. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
