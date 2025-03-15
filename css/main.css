@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #bfc1c8;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  background: #1e202b;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0 0 20px;
+  line-height: normal;
+}
+.content-logo h1 {
+  margin-bottom: 3px;
+  font-size: 1em;
+  color: white;
+}
+.content-logo p {
+  font-size: 0.5em;
+  color: #bfc1c8;
+}
+
+
+
+
+.main-sec {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
+    url(../imgs/banner.png);
+  background-position: center;
+  background-size: cover;
+
+  height: 50vh;
+  background-repeat: no-repeat;
+}
+form {
+  padding: 50px 0;
+}
+.search,
+.sub {
+  position: relative;
+}
+.search-input,
+.sub-input {
+  background-color: #1e202b;
+  border-radius: 50px;
+  border: none;
+  padding: 20px 50px 20px 20px;
+}
+.search-input::placeholder,
+.sub-input::placeholder {
+  color: #757575;
+}
+.search-input:focus,
+.sub-input:focus {
+  background-color: #1e202b;
+  color: white;
+  box-shadow: none;
+}
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #009ad8;
+  padding: 12px 40px;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  transition: 0.2s;
+}
+.search-btn:hover {
+  background-color: #0084b8;
+}
+.cardI,
+.cardII,
+.cardIII {
+ 
+  height: 100%;
+}
+
+.cardI .head {
+  background-color: #2d303d;
+  padding: 10px;
+  border-radius: 10px 0px 0px 0px;
+}
+.cardI .body {
+  background-color: #323544;
+  border-radius: 0px 0px 0px 10px;
+}
+
+.cardI .deg {
+  font-size: 4.5rem;
+  
+}
+.cardII .head {
+  background-color: #222530;
+  padding: 10px;
+}
+.cardII .body {
+  background-color: #262936;
+}
+
+.cardII .degB,
+.cardIII .degB {
+  font-size: 1.7142857143em;
+  color: white;
+}
+.cardII .degS,
+.cardIII .degS {
+  font-size: 1.1428571429em;
+}
+.cardII .cond,
+.cardIII .cond {
+  color: #009ad8;
+}
+.cardIII .head {
+  background-color: #2d303d;
+  padding: 10px;
+  border-radius: 0px 10px 0px 0px;
+}
+.cardIII .body {
+  background-color: #323544;
+  border-radius: 0px 0px 10px 0px;
+}
+
+
+
+footer {
+  background-color: #262936;
+}
+.sub-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #009ad8;
+  padding: 12px 40px;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  transition: 0.2s;
+}
+.sub-btn:hover {
+  background-color: #0084b8;
+}
+.icon {
+  text-decoration: none;
+  color: #009ad8;
+  background-color: #1e202b;
+  width: 38px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.icon:hover {
+  background-color: #009ad8;
+  color: white;
+}
